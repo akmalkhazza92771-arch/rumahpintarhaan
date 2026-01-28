@@ -18,28 +18,6 @@
             --color-misty-gray: #BCC6CC; 
         }
 
-        /* Kode untuk Note Card Cream */
-        .note-card-cream {
-            background-color: #FFFDD0; /* Warna Cream */
-            border-left: 6px solid var(--color-primary);
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 30px;
-            max-width: 900px;
-            width: 100%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .note-card-cream p {
-            color: #444;
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 1.6;
-            margin: 0;
-            font-style: italic;
-        }
-
         .gym-custom-image {
             width: 100% !important;
             max-width: 900px;
@@ -50,6 +28,7 @@
             display: block;
         }
 
+        /* Kode baru untuk memperkecil gambar gym */
         .gym-small-image {
             width: 100% !important;
             max-width: 900px !important; 
@@ -93,21 +72,24 @@
             font-weight: 800;
         }
 
+        /* Tampilan Default (Halaman Pertama) */
         .service-title-bg {
-            background-color: #2a2a2a; 
+            background-color:  #2a2a2a; 
             padding: 5px 15px;
             border-radius: 8px;
             display: inline-block;
             margin-bottom: 5px;
         }
 
+        /* Khusus Halaman Detail (Halaman Kedua) - Diperkecil */
         .detail-header .service-title-bg {
             padding: 2px 10px;
             border-radius: 5px;
+            background-color: #000; 
         }
 
         .detail-header .service-title-bg h2 {
-            font-size: 1.4rem; 
+            font-size: 1.4rem; /* Ukuran teks judul di halaman detail diperkecil agar proporsional */
             margin: 0;
         }
 
@@ -157,9 +139,6 @@
             width: 100%;
             max-width: 1000px;
             margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .room-gallery {
@@ -202,6 +181,88 @@
             color: #ffffff;
         }
 
+        /* STYLES UNTUK GALERI KEGIATAN */
+        .kegiatan-container {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .kegiatan-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .kegiatan-header h3 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #0056b3; 
+            text-shadow: 
+                -1px -1px 0 #fff,  
+                 1px -1px 0 #fff,
+                -1px  1px 0 #fff,
+                 1px  1px 0 #fff, 
+                 3px 3px 6px rgba(0, 0, 0, 0.3); 
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .kegiatan-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+
+        .kegiatan-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .kegiatan-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .kegiatan-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .kegiatan-info {
+            padding: 20px;
+            text-align: center;
+            background: #000000;
+        }
+
+        .kegiatan-info h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .kegiatan-info p {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #ffffff;
+            line-height: 1.4;
+        }
+
         .black-box-list {
             background-color: #000000;
             color: #ffffff !important;
@@ -239,6 +300,286 @@
             content: "✓ ";
             color: var(--color-primary);
             font-weight: bold;
+        }
+
+        /* STYLES UNTUK PROGRAM BIMBEL (GELOMBANG) */
+        .program-bimbel-container {
+            background: #004aad; /* Warna biru sesuai gambar */
+            padding: 30px 15px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 900px;
+            margin-top: 30px;
+        }
+
+        .gelombang-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .gelombang-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .gel-label {
+            background: #ffb347;
+            color: #000;
+            padding: 10px;
+            border-radius: 15px;
+            font-weight: 800;
+            min-width: 100px;
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .gel-content {
+            background: #7ed9ff;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 15px;
+            flex: 1;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-align: center;
+            line-height: 1.3;
+            text-transform: uppercase;
+        }
+
+        /* STYLES UNTUK FASILITAS BARU (DARI GAMBAR) */
+        .fasilitas-container {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .fasilitas-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .fasilitas-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--color-primary);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .fasilitas-title {
+            font-size: 2.0rem;
+            font-weight: 900;
+            color: #004aad;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .fasilitas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+        }
+
+        .fasilitas-item {
+            background: #000;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 6px solid var(--color-primary);
+        }
+
+        .fasilitas-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--color-primary);
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .fasilitas-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .fasilitas-item li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .fasilitas-item li:last-child {
+            border-bottom: none;
+        }
+
+        .fasilitas-item li i {
+            color: var(--color-primary);
+            width: 20px;
+            text-align: center;
+        }
+
+        /* STYLES UNTUK PERBANDINGAN BIMBEL */
+        .perbandingan-container {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .perbandingan-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .perbandingan-header h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .perbandingan-header h2 .blue-text-style {
+            font-size: 2.2rem;
+        }
+
+        .perbandingan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .perbandingan-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .perbandingan-card {
+            background: #000;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            border-top: 6px solid var(--color-primary);
+        }
+
+        .perbandingan-card.green {
+            border-top-color: #4CAF50;
+        }
+
+        .perbandingan-card.red {
+            border-top-color: #FF5252;
+        }
+
+        .perbandingan-card h3 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .perbandingan-card.green h3 {
+            color: #4CAF50;
+        }
+
+        .perbandingan-card.red h3 {
+            color: #FF5252;
+        }
+
+        .perbandingan-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .perbandingan-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+            font-size: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.4;
+        }
+
+        .perbandingan-list li:last-child {
+            border-bottom: none;
+        }
+
+        .perbandingan-list li strong {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        .perbandingan-list li .icon-check {
+            color: #4CAF50;
+            font-size: 1.2rem;
+            min-width: 20px;
+        }
+
+        .perbandingan-list li .icon-cross {
+            color: #FF5252;
+            font-size: 1.2rem;
+            min-width: 20px;
+        }
+
+        .highlight-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: 5px;
+        }
+
+        .green-text {
+            color: #4CAF50;
+        }
+
+        .red-text {
+            color: #FF5252;
+        }
+
+        .perbandingan-divider {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .perbandingan-divider span {
+            background: white;
+            padding: 0 20px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #666;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .perbandingan-divider:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #eee;
+            z-index: -1;
         }
 
         .container { width: 85%; max-width: 1200px; margin: auto; }
@@ -285,6 +626,7 @@
         }
         header nav ul li a:hover, header nav ul li a.active { color: var(--color-primary); }
 
+        /* Style untuk Tombol Titik Tiga (Mobile) */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -436,9 +778,9 @@
         }
 
         .detail-header {
-            background: #2a2a2a;
+            background: #000;
             color: white;
-            padding: 40px 0; 
+            padding: 40px 0; /* Padding header detail sedikit dikurangi */
             text-align: center;
         }
 
@@ -513,17 +855,18 @@
             background-color: var(--color-misty-gray) !important;
         }
 
+        /* MEDIA QUERY UNTUK TAMPILAN HANDPHONE */
         @media (max-width: 768px) {
             header .container { 
                 padding: 0 20px;
             }
             
             .menu-toggle {
-                display: flex; 
+                display: flex; /* Titik tiga muncul */
             }
 
             header nav ul {
-                display: none; 
+                display: none; /* Menu disembunyikan secara default di mobile */
                 flex-direction: column;
                 position: absolute;
                 top: 100%;
@@ -536,7 +879,7 @@
             }
 
             header nav ul.show {
-                display: flex; 
+                display: flex; /* Muncul ketika tombol diklik */
             }
 
             header nav ul li {
@@ -559,7 +902,24 @@
             .rph-custom-image { height: 250px !important; }
             .gym-small-image { height: 250px !important; max-width: 100% !important; }
             .detail-header .service-title-bg h2 { font-size: 1.2rem; }
-            .note-card-cream { padding: 15px; margin-top: 20px; }
+            
+            /* Mobile adjustment for gelombang */
+            .gelombang-row { flex-direction: column; gap: 5px; }
+            .gel-label { min-width: 100%; }
+            
+            /* Mobile adjustment for fasilitas */
+            .fasilitas-number { font-size: 3rem; }
+            .fasilitas-title { font-size: 1.8rem; }
+            .fasilitas-list { grid-template-columns: 1fr; }
+            
+            /* Mobile adjustment for perbandingan */
+            .perbandingan-grid { grid-template-columns: 1fr; }
+            .perbandingan-card h3 { font-size: 1.5rem; }
+            .highlight-number { font-size: 2rem; }
+            
+            /* Mobile adjustment for kegiatan */
+            .kegiatan-gallery { grid-template-columns: 1fr; }
+            .kegiatan-header h3 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -648,7 +1008,7 @@
                     <div class="info-grid">
                         <div class="info-card">
                             <h4 class="blue-text-style" style="margin-bottom:10px;">9-Haan Guest House</h4>
-                            <p style="margin-bottom: 15px; color: #666; font-size: 0.85rem;">Reservasi penginapan & info kamar</p>
+                            <p style="margin-bottom: 15px; color: #666; font-size: 0.85rem;">Reservasi kamar</p>
                             <a href="https://wa.me/6282311411989" target="_blank" class="btn btn-whatsapp" style="min-width: 100%; padding: 12px;">Chat Admin 1</a>
                         </div>
                         <div class="info-card">
@@ -699,7 +1059,7 @@
                 </div>
             </div>
             <div style="margin-top: 50px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                <a href="https://wa.me/6282311411989" target="_blank" class="btn btn-whatsapp">Hubungi via WhatsApp</a>
+                <a href="https://wa.me/6282311411989" target="_blank" class="btn btn-whatsapp">Pesan Sekarang</a>
                 <a href="https://www.instagram.com/9haan.guest.house" target="_blank" class="btn btn-instagram">@9haan.guest.house</a>
                 <a href="https://maps.app.goo.gl/Xph6qDHk58SF6LZr6?g_st=aw" target="_blank" class="btn btn-maps">Lokasi Google Maps</a>
                 <a onclick="showPage('layanan')" class="btn" style="background:#666; min-width: 150px;">Kembali</a>
@@ -746,8 +1106,46 @@
                 </div>
             </div>
 
+            <div class="program-bimbel-container">
+                <h3 style="color: white; margin-bottom: 25px; font-family: 'Montserrat'; font-weight: 900; letter-spacing: 2px;">PROGRAM BIMBEL</h3>
+                <div class="gelombang-grid">
+                    <div class="gelombang-row">
+                        <div class="gel-label">GEL. 1</div>
+                        <div class="gel-content">Program Regular : 6 Bulan<br>Bimbingan Bulan Juli - Desember</div>
+                    </div>
+                    <div class="gelombang-row">
+                        <div class="gel-label">GEL. II</div>
+                        <div class="gel-content">Program Regular : 6 Bulan<br>Bimbingan Bulan Agustus - Januari</div>
+                    </div>
+                    <div class="gelombang-row">
+                        <div class="gel-label">GEL. III</div>
+                        <div class="gel-content">Program Regular : 6 Bulan<br>Bimbingan Bulan September - Februari</div>
+                    </div>
+                    <div class="gelombang-row">
+                        <div class="gel-label">GEL. IV</div>
+                        <div class="gel-content">Program Regular : 6 Bulan<br>Bimbingan Bulan Oktober - Maret</div>
+                    </div>
+                    <div class="gelombang-row">
+                        <div class="gel-label">GEL. V</div>
+                        <div class="gel-content">Program Middle : 5 Bulan<br>Bimbingan Bulan November - Februari</div>
+                    </div>
+                    <div class="gelombang-row">
+                        <div class="gel-label">GEL. VI</div>
+                        <div class="gel-content">Program Middle : 3 Bulan<br>Bimbingan Bulan Desember - Februari</div>
+                    </div>
+                    <div class="gelombang-row">
+                        <div class="gel-label">GEL. VII</div>
+                        <div class="gel-content">Program Middle : 3 Bulan<br>Bimbingan Bulan Januari - Maret</div>
+                    </div>
+                    <div class="gelombang-row">
+                        <div class="gel-label">GEL. VIII - X</div>
+                        <div class="gel-content">Program Intensive : 2 Bulan / 1 Bulan<br>Bimbingan Bulan Februari - April</div>
+                    </div>
+                </div>
+            </div>
+
             <div class="white-card-box">
-                <h3 class="blue-text-style" style="margin-bottom: 25px; text-align: center;">Ruang Bimbingan & Fasilitas</h3>
+                <h3 class="blue-text-style" style="margin-bottom: 25px; text-align: center;">Ruang Bimbingan</h3>
                 <div class="room-gallery">
                     <div class="room-card">
                         <img src="ruangkelas.jpg" alt="Ruang Belajar Akademik">
@@ -758,36 +1156,222 @@
                     <div class="room-card">
                         <img src="ruangkelas1.jpg" alt="Ruang Kelas 1">
                         <div class="room-info">
-                            <p>Ruang Pembelajaran <br>Bahasa Indonesia<br></p>
+                            <p>Ruang Pembelajaran
+                                <br>Bahasa Indonesia<br>
+                            </p>
                         </div>
                     </div>
                     <div class="room-card">
                         <img src="ruangkelas2.jpg" alt="Ruang Kelas 2">
                         <div class="room-info">
-                            <p>Ruang Pembelajaran <br>Psikolog<br></p>
+                            <p>Ruang Pembelajaran 
+                                <br>Psikolog<br>
+                            </p>
                         </div>
                     </div>
                     <div class="room-card">
                         <img src="ruangCAT1.jpg" alt="Ruang Belajar CAT">
                         <div class="room-info">
-                            <p>Ruang Pembelajaran <br>CAT dan TWK<br></p>
+                            <p>Ruang Pembelajaran
+                                <br>CAT dan TWK<br>
+                            </p>
                         </div>
                     </div>
                     <div class="room-card">
                         <img src="ruangJasmani1.jpg" alt="Ruang Belajar Jasmani">
                         <div class="room-info">
-                            <p>Ruang Pembelajaran <br>Kesamaptaan Jasmani<br></p>
+                            <p>Ruang Pembelajaran
+                                <br>Kesamaptaan Jasmani<br>
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="note-card-cream">
-                    <p>"Hadirkan pengalaman belajar terbaik di ruang kelas yang dirancang khusus untuk kenyamanan maksimal. Dilengkapi dengan Full AC untuk menjaga suhu tetap sejuk, kebersihan ruangan yang higienis, serta fasilitas Wi-Fi berkecepatan tinggi guna mendukung riset dan pembelajaran digital tanpa hambatan. Lingkungan yang nyaman adalah kunci konsentrasi yang mendalam."</p>
+            <!-- FASILITAS BARU (DARI GAMBAR) -->
+            <div class="fasilitas-container">
+                <div class="fasilitas-header">
+                    <div class="fasilitas-title blue-text-style">Fasilitas Pendukung</div>
+                </div>
+                
+                <div class="fasilitas-list">
+                    <div class="fasilitas-item">
+                        <h4>RUANG KELAS</h4>
+                        <ul>
+                            <li><i class="fas fa-snowflake"></i> AC suhu optimal</li>
+                            <li><i class="fas fa-chair"></i> Kursi ergonomis</li>
+                            <li><i class="fas fa-chalkboard-teacher"></i> Papan tulis dan proyektor</li>
+                            <li><i class="fas fa-lightbulb"></i> Pencahayaan memadai</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi kencang</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="fasilitas-item">
+                        <h4>FREE GYM</h4>
+                        <ul>
+                            <li><i class="fas fa-dumbbell"></i> Peralatan fitness lengkap</li>
+                            <li><i class="fas fa-running"></i> Alat kardio terpisah</li>
+                            <li><i class="fas fa-toilet"></i> Toilet bersih</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="fasilitas-item">
+                        <h4>LAB KOMPUTER CAT</h4>
+                        <ul>
+                            <li><i class="fas fa-laptop"></i> 22 unit laptop</li>
+                            <li><i class="fas fa-network-wired"></i> Jaringan internet stabil</li>
+                            <li><i class="fas fa-desktop"></i> Software CAT terbaru</li>
+                            <li><i class="fas fa-charging-station"></i> Charging station lengkap</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- GALERI KEGIATAN -->
+            <div class="kegiatan-container">
+                <div class="kegiatan-header">
+                    <h3 class="blue-text-style">Kegiatan Belajar Mengajar</h3>
+                    <p style="color: #666; font-size: 1rem; max-width: 800px; margin: 0 auto;">Berbagai aktivitas pembelajaran yang dilakukan di Rumah Pintar Haan</p>
+                </div>
+                
+                <div class="kegiatan-gallery">
+                    <div class="kegiatan-card">
+                        <img src="kegiatankelas.png" alt="Kegiatan di Ruang Kelas">
+                        <div class="kegiatan-info">
+                            <h4>Kegiatan di Ruang Kelas</h4>
+                            <p>Pembelajaran materi akademik dengan metode interaktif dan diskusi kelompok</p>
+                        </div>
+                    </div>
+                    
+                    <div class="kegiatan-card">
+                        <img src="kegiatancat.png" alt="Kegiatan di Ruang CAT">
+                        <div class="kegiatan-info">
+                            <h4>Kegiatan di Ruang CAT</h4>
+                            <p>Simulasi Computer Assisted Test <br>untuk persiapan lolos ujian kedinasan<br> </p>
+                        </div>
+                    </div>
+                    
+                    <div class="kegiatan-card">
+                        <img src="kegiatanjasmani.png" alt="Kegiatan Jasmani">
+                        <div class="kegiatan-info">
+                            <h4>Kegiatan Jasmani</h4>
+                            <p>Latihan fisik dan kesamaptaan untuk persiapan tes kesamaptaan jasmani</p>
+                        </div>
+                    </div>
+                    
+                    <div class="kegiatan-card">
+                        <img src="kegiatanlongrun.png" alt="Kegiatan Long Run">
+                        <div class="kegiatan-info">
+                            <h4>Kegiatan Long Run</h4>
+                            <p>Latihan lari jarak jauh untuk meningkatkan stamina dan daya tahan fisik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PERBANDINGAN BIMBEL -->
+            <div class="perbandingan-container">
+                <div class="perbandingan-header">
+                    <h2>Ikut Bimbel di <span class="blue-text-style">Rumah Pintar Haan</span></h2>
+                    <p style="color: #666; font-size: 1rem; max-width: 800px; margin: 0 auto;">Perbandingan antara mengikuti bimbingan belajar dengan belajar sendiri</p>
+                </div>
+                
+                <div class="perbandingan-grid">
+                    <div class="perbandingan-col">
+                        <div class="perbandingan-card green">
+                            <h3>DENGAN BIMBINGAN KAMI</h3>
+                            <ul class="perbandingan-list">
+                                <li>
+                                    <i class="fas fa-check-circle icon-check"></i>
+                                    <div>
+                                        <strong>Peluang kelulusan meningkat hingga 70%</strong><br>
+                                        Berdasarkan data alumni kami yang berhasil lolos seleksi
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle icon-check"></i>
+                                    <div>
+                                        <strong>Materi terstruktur dan terarah</strong><br>
+                                        Fokus pada materi yang sering keluar di ujian
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle icon-check"></i>
+                                    <div>
+                                        <strong>Bimbingan dari lulusan sekolah kedinasan</strong><br>
+                                        Mendapat tips dan trik dari orang yang sudah berhasil
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle icon-check"></i>
+                                    <div>
+                                        <strong>Try out berkala dengan sistem CAT</strong><br>
+                                        Terbiasa dengan pola dan sistem ujian yang sebenarnya
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle icon-check"></i>
+                                    <div>
+                                        <strong>Pemantauan progres belajar</strong><br>
+                                        Evaluasi berkala untuk perbaikan strategi belajar
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="perbandingan-col">
+                        <div class="perbandingan-card red">
+                            <h3>TANPA BIMBINGAN</h3>
+                            <ul class="perbandingan-list">
+                                <li>
+                                    <i class="fas fa-times-circle icon-cross"></i>
+                                    <div>
+                                        <strong>Peluang kelulusan hanya 5–10%</strong><br>
+                                        Siswa kesulitan dalam belajar sendiri
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times-circle icon-cross"></i>
+                                    <div>
+                                        <strong>Belajar tidak terarah</strong><br>
+                                        Kesulitan menentukan fokus materi yang perlu dipelajari
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times-circle icon-cross"></i>
+                                    <div>
+                                        <strong>Tidak ada bimbingan dari ahli</strong><br>
+                                        Belajar sendiri = Bingung sendiri
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times-circle icon-cross"></i>
+                                    <div>
+                                        <strong>Kurang latihan soal</strong><br>
+                                        Tidak terbiasa dengan pola soal dan sistem ujian
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fas fa-times-circle icon-cross"></i>
+                                    <div>
+                                        <strong>Tidak ada evaluasi kemajuan</strong><br>
+                                        Sulit mengukur kesiapan dan kemampuan diri
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="perbandingan-divider">
+                    <span>PILIH YANG TERBAIK UNTUK MASA DEPAN ANDA</span>
                 </div>
             </div>
 
             <div style="margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                <a href="https://wa.me/6282153261450" target="_blank" class="btn btn-whatsapp">Hubungi via WhatsApp</a>
+                <a href="https://wa.me/6282153261450" target="_blank" class="btn btn-whatsapp">Daftar Sekarang</a>
                 <a href="https://www.instagram.com/rumahpintarhaan" target="_blank" class="btn btn-instagram">@rumahpintarhaan</a>
                 <a href="https://maps.app.goo.gl/9dn1U9QM5H5ehvZZ7?g_st=aw" target="_blank" class="btn btn-maps">Lokasi Google Maps</a>
                 <a onclick="showPage('layanan')" class="btn" style="background:#666; min-width: 150px;">Kembali</a>
@@ -825,7 +1409,7 @@
                 </div>
             </div>
             <div style="margin-top: 50px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                <a href="https://wa.me/6282153261450" target="_blank" class="btn btn-whatsapp">Hubungi via WhatsApp</a>
+                <a href="https://wa.me/6282153261450" target="_blank" class="btn btn-whatsapp">Gabung Member</a>
                 <a href="https://www.instagram.com/9haan_fitness" target="_blank" class="btn btn-instagram">@9haan_fitness</a>
                 <a href="https://maps.app.goo.gl/QNchmKYUUSfgwxxf7?g_st=aw" target="_blank" class="btn btn-maps">Lokasi Google Maps</a>
                 <a onclick="showPage('layanan')" class="btn" style="background:#666; min-width: 150px;">Kembali</a>
@@ -834,28 +1418,30 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 <b>PT RUMAH PINTAR HAAN</b>. All rights reserved.</p>
+        <div class="container">
+            <p>© 2026 <b>RUMAH PINTAR HAAN</b>. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
             
-            document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
-            const navId = 'nav-' + (pageId.includes('detail') ? 'layanan' : pageId);
-            const activeNav = document.getElementById(navId);
-            if(activeNav) activeNav.classList.add('active');
-
-            window.scrollTo(0, 0);
+            document.querySelectorAll('nav a').forEach(link => link.classList.remove('acative'));
+            if(document.getElementById('nav-' + pageId)) {
+                document.getElementById('nav-' + pageId).classList.add('active');
+            }
             
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.remove('show');
-        }
-
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('show');
+            
+            window.scrollTo(0, 0);
         }
     </script>
 </body>
